@@ -1,17 +1,16 @@
-// Toggle active
+// toggle class active
 const navbarNav = document.querySelector(".navbar-nav");
-const menu = document.querySelector(".navbar-extra");
 
-// Menu Di Klik
-document.querySelector("#menu-icon").onclick = () => {
-  navbarNav.classList.toggle("active");
-  menu.classList.toggle("active"); // Menambah/menghapus kelas "active" pada ikon menu
+// ketika bakso menu di klik
+document.querySelector("#profile-menu").onclick = () => {
+    navbarNav.classList.toggle("active");
 };
 
-// Klik di Luar side Bar untuk menutup Navbar
+// klik di luar sidebar untuk menghilangkan navbarNav
+const profileMenu = document.querySelector("#profile-menu");
+
 document.addEventListener("click", function (e) {
-  if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active");
-    menu.classList.remove("active"); // Menghapus kelas "active" pada ikon menu jika di luar side bar
-  }
+    if (!profileMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+        navbarNav.classList.remove("active");
+    }
 });

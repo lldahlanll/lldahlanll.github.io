@@ -498,6 +498,13 @@ span {
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .footer-text {
+    font-size: 1.2rem;
+  }
+  .footer-iconTop a i {
+    font-size: 1.2rem;
+    color: var(--second-bg-color);
+  }
 }
 
 /* Phone */

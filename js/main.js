@@ -7,10 +7,10 @@ document.querySelector("#profile-menu").onclick = () => {
 };
 
 // klik di luar sidebar untuk menghilangkan navbarNav
-const profileMenu = document.querySelector("#profile-menu");
+const bakso = document.querySelector("#profile-menu");
 
 document.addEventListener("click", function (e) {
-    if (!profileMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+    if (!bakso.contains(e.target) && !navbarNav.contains(e.target)) {
         navbarNav.classList.remove("active");
     }
 });

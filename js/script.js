@@ -1,8 +1,9 @@
 // Toggle class active
 const navbarNav = document.querySelector(".navbar-nav");
-const menuIcon = document.querySelector("#menu-icon");
+const menuIcon = document.querySelector("#menu");
 
 menuIcon.onclick = () => {
+  menuIcon.classList.toggle("openmenu");
   navbarNav.classList.toggle("active");
 };
 
@@ -10,17 +11,17 @@ menuIcon.onclick = () => {
 document.addEventListener("click", function (e) {
   if (!menuIcon.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
-    menuIcon.classList.remove("bx-x");
+    menuIcon.classList.remove("openmenu");
   }
 });
 
 // Toggle Icon
-const menuIcons = document.querySelectorAll("#menu-icon");
+const menuIcons = document.querySelectorAll("#menu");
 const navbars = document.querySelectorAll(".navbar-nav");
 
 menuIcons.forEach((menuIcon, index) => {
   menuIcon.onclick = () => {
-    menuIcon.classList.toggle("bx-x");
+    menuIcon.classList.toggle("openmenu");
     navbars[index].classList.toggle("active");
   };
 });
@@ -52,9 +53,9 @@ window.onscroll = () => {
     navbar.classList.toggle("sticky", window.scrollY > 100);
   }
 
-  let menuIcon = document.querySelector("#menu-icon");
+  let menuIcon = document.querySelector("#menu");
   if (menuIcon) {
-    menuIcon.classList.remove("bx-x");
+    menuIcon.classList.remove("openmenu");
     navbars.forEach((navbar) => {
       navbar.classList.remove("active");
     });

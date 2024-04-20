@@ -70,3 +70,14 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+// Scroll Reveal
+ScrollReveal({ reset: true, distance: "80px", duration: 2000, delay: 200 });
+
+ScrollReveal().reveal(".heading, .home-img", { origin: "top" });
+ScrollReveal().reveal(
+  ".home-content, .services-container, .services-box, .contact form, .portfolio-container",
+  { origin: "bottom" }
+);
+ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
+ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
